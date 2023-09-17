@@ -10,6 +10,7 @@ if __name__ == '__main__':
     sourceList = dict(sweep.sweep(args['source']))
     targetList = dict(sweep.sweep(args['target']))
 
+    # I need to do the following inside sweep to take advantage of yeild for resource consumstion
     for i in sourceList:
         if i not in targetList:
             print(i, sourceList[i])
